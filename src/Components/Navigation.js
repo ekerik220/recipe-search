@@ -1,4 +1,4 @@
-import { Navbar, Button, Nav, Form, FormControl } from "react-bootstrap";
+import { Navbar, Button, Form, FormControl } from "react-bootstrap";
 import React from "react";
 import { useState } from "react";
 import fetchRecipes from "../utilities/fetchRecipes.js";
@@ -12,8 +12,11 @@ function Navigation(props) {
         props.setLoading(true);
         fetchRecipes(searchTerm, {from:0, to:24})
             .then(data => {
-                props.setRecipeData(data)
+                props.setRecipeData(data.hits)
                 props.setLoading(false);
+                props.setMoreResults(data.more);
+                props.setCurrentSearchTerm(searchTerm);
+                props.setSearchRange([0,24]);
             });
     }
   };

@@ -13,6 +13,9 @@ function App() {
   const [recipeData, setRecipeData] = useLocalStorage("recipeData");
   const [selectedRecipe, setSelectedRecipe] = useLocalStorage("selectedRecipe");
   const [loading, setLoading] = useState(false);
+  const [moreResults, setMoreResults] = useLocalStorage(false);
+  const [currentSearchTerm, setCurrentSearchTerm] = useLocalStorage("currentSearchTerm", "");
+  const [searchRange, setSearchRange] = useLocalStorage("searchRange", [0, 24]);
 
   // Clear local storage when the page is loaded fresh.
   useEffect(() => {
@@ -33,12 +36,21 @@ function App() {
                     {...props}
                     setRecipeData={setRecipeData}
                     setLoading={setLoading}
+                    setMoreResults={setMoreResults}
+                    setCurrentSearchTerm={setCurrentSearchTerm}
+                    setSearchRange={setSearchRange}
                   />
                   <RecipeArea
                     {...props}
                     recipeData={recipeData}
                     loading={loading}
+                    moreResults={moreResults}
+                    currentSearchTerm={currentSearchTerm}
+                    searchRange={searchRange}
+                    setSearchRange={setSearchRange}
                     setSelectedRecipe={setSelectedRecipe}
+                    setMoreResults={setMoreResults}
+                    setRecipeData={setRecipeData}
                   />
                 </div>
               )}

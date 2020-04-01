@@ -1,5 +1,4 @@
 import React from "react";
-import RecipeArea from "./RecipeArea";
 
 function NutritionLabel(props) {
   const recipe = props.recipe;

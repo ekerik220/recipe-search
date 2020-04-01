@@ -1,7 +1,5 @@
 import React from "react";
 import {
-  Navbar,
-  Nav,
   Button,
   Image,
   Container,
@@ -45,8 +43,8 @@ function RecipePage(props) {
           <Col xs={12} md={6}>
             <h2>Ingredients</h2>
             <ul>
-              {recipe.ingredientLines.map(ingredient => (
-                <li>{ingredient}</li>
+              {recipe.ingredientLines.map((ingredient, i) => (
+                <li key={i}>{ingredient}</li>
               ))}
             </ul>
           </Col>

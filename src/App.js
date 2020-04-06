@@ -23,12 +23,12 @@ function App() {
   }, []);
 
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <div className="App">
         <ScrollIntoView>
           <Switch>
             <Route
-              path="/recipe-search/"
+              path="/"
               exact
               render={props => (
                 <div>

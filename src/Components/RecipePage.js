@@ -24,7 +24,7 @@ function RecipePage(props) {
               variant="outline-secondary"
               className="mt-2"
               style={{ width: "100px" }}
-              onClick={() => props.history.push("/")}
+              onClick={() => props.history.push("/recipe-search/")}
             >
               {"<< Back"}
             </Button>

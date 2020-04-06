@@ -28,7 +28,7 @@ function App() {
         <ScrollIntoView>
           <Switch>
             <Route
-              path="/"
+              path="/recipe-search/"
               exact
               render={props => (
                 <div>

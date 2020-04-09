@@ -15,4 +15,4 @@ Simply use the search bar to search for recipes and select the one you're intere
 
 ## Live link
 
---
+https://ekerik220.github.io/recipe-search/
